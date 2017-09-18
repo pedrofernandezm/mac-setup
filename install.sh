@@ -23,6 +23,7 @@ declare -a install_items=(
                 "vim"
                 "tmux"
                 "python"
+                "python3"
                 "autojump"
                 "ctags"
                 "openssl"
@@ -42,11 +43,8 @@ do
   __brew_install $item
 done
 
-__echo "Installing pip"
-python get-pip.py
-
 __echo "Installing tmuxp"
-pip install tmuxp
+pip3 install tmuxp
 
 __echo "Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
